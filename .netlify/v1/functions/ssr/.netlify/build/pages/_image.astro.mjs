@@ -1,5 +1,5 @@
-import { A as AstroError, N as NoImageMetadata, F as FailedToFetchRemoteImageDimensions, d as ExpectedImageOptions, E as ExpectedImage, e as ExpectedNotESMImage, f as InvalidImageService, g as createComponent, h as ImageMissingAlt, m as maybeRenderHead, i as addAttribute, s as spreadAttributes, r as renderTemplate, j as createAstro } from '../chunks/astro/server_MEB9lWux.mjs';
-import { r as resolveSrc, i as isRemoteImage, a as isCoreRemotePath, b as isESMImportedImage, c as isLocalService, D as DEFAULT_HASH_PROPS, d as isRemoteAllowed } from '../chunks/astro/assets-service_D7IHBSRU.mjs';
+import { A as AstroError, N as NoImageMetadata, F as FailedToFetchRemoteImageDimensions, E as ExpectedImageOptions, b as ExpectedImage, c as ExpectedNotESMImage, I as InvalidImageService, d as createComponent, e as ImageMissingAlt, m as maybeRenderHead, f as addAttribute, s as spreadAttributes, r as renderTemplate, g as createAstro } from '../chunks/astro/server_DWGoAWHJ.mjs';
+import { r as resolveSrc, i as isRemoteImage, a as isCoreRemotePath, b as isESMImportedImage, c as isLocalService, D as DEFAULT_HASH_PROPS, d as isRemoteAllowed } from '../chunks/astro/assets-service_BfMGItHB.mjs';
 export { renderers } from '../renderers.mjs';
 
 function isImageMetadata(src) {
@@ -840,8 +840,8 @@ async function getConfiguredImageService() {
   if (!globalThis?.astroAsset?.imageService) {
     const { default: service } = await import(
       // @ts-expect-error
-      '../chunks/astro/assets-service_D7IHBSRU.mjs'
-    ).then(n => n.s).catch((e) => {
+      '@astrojs/netlify/image-service.js'
+    ).catch((e) => {
       const error = new AstroError(InvalidImageService);
       error.cause = e;
       throw error;
@@ -949,7 +949,7 @@ const $$Image = createComponent(async ($$result, $$props, $$slots) => {
     additionalAttributes["data-image-component"] = "true";
   }
   return renderTemplate`${maybeRenderHead()}<img${addAttribute(image.src, "src")}${spreadAttributes(additionalAttributes)}${spreadAttributes(image.attributes)}>`;
-}, "/home/computer/LearnCard-project/space-dodger/node_modules/.pnpm/astro@4.16.19_lightningcss@1.31.1_rollup@4.59.0_typescript@5.9.3/node_modules/astro/components/Image.astro", void 0);
+}, "/home/computer/LearnCard-project/space-dodger/node_modules/.pnpm/astro@4.16.19_@types+node@25.5.0_lightningcss@1.31.1_rollup@4.59.0_typescript@5.9.3/node_modules/astro/components/Image.astro", void 0);
 
 const mimes = {
   "3g2": "video/3gpp2",
@@ -1459,9 +1459,9 @@ const $$Picture = createComponent(async ($$result, $$props, $$slots) => {
     const srcsetAttribute = props.densities || !props.densities && !props.widths ? `${image.src}${image.srcSet.values.length > 0 ? ", " + image.srcSet.attribute : ""}` : image.srcSet.attribute;
     return renderTemplate`<source${addAttribute(srcsetAttribute, "srcset")}${addAttribute(lookup(image.options.format ?? image.src) ?? `image/${image.options.format}`, "type")}${spreadAttributes(sourceAdditionalAttributes)}>`;
   })} <img${addAttribute(fallbackImage.src, "src")}${spreadAttributes(imgAdditionalAttributes)}${spreadAttributes(fallbackImage.attributes)}> </picture>`;
-}, "/home/computer/LearnCard-project/space-dodger/node_modules/.pnpm/astro@4.16.19_lightningcss@1.31.1_rollup@4.59.0_typescript@5.9.3/node_modules/astro/components/Picture.astro", void 0);
+}, "/home/computer/LearnCard-project/space-dodger/node_modules/.pnpm/astro@4.16.19_@types+node@25.5.0_lightningcss@1.31.1_rollup@4.59.0_typescript@5.9.3/node_modules/astro/components/Picture.astro", void 0);
 
-const imageConfig = {"service":{"entrypoint":"astro/assets/services/sharp","config":{}},"domains":[],"remotePatterns":[]};
+const imageConfig = {"service":{"entrypoint":"@astrojs/netlify/image-service.js","config":{}},"domains":[],"remotePatterns":[]};
 					const getImage = async (options) => await getImage$1(options, imageConfig);
 
 const fnv1a52 = (str) => {
