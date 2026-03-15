@@ -1,0 +1,45 @@
+{
+  "name": "space-dodger",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "An arcade-style space dodger game that issues verifiable credentials for high scores",
+  "author": "LearnCard Team",
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/netlify": "5.5.4",
+    "@astrojs/node": "^10.0.1",
+    "@learncard/partner-connect": "^0.2.9",
+    "astro": "4.16.19"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "prettier-plugin-astro": "^0.5.4",
+    "tailwindcss": "^4.2.1"
+  },
+  "keywords": [
+    "game",
+    "arcade",
+    "credentials",
+    "achievements",
+    "space",
+    "learncard",
+    "verifiable-credentials"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learningeconomy/space-dodger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/learningeconomy/space-dodger/issues"
+  },
+  "homepage": "https://github.com/learningeconomy/space-dodger#readme"
+}
