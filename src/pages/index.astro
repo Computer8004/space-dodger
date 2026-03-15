@@ -1085,8 +1085,10 @@ import '../styles/global.css';
     import { validateAchievement, ACHIEVEMENT_TIERS } from '../lib/achievements.js';
     
     // --- LEARNCARD SDK SETUP ---
-    // Use default configuration - SDK auto-detects host origin from lc_host_override query param
-    const learnCard = createPartnerConnect();
+    // Configure with multiple allowed origins to support GitHub Pages hosting
+    const learnCard = createPartnerConnect({
+      hostOrigin: ['https://learncard.app', 'https://computer8004.github.io']
+    });
     
     let isAuthenticated = false;
     let userDid = null;
