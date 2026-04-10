@@ -7,12 +7,12 @@
   "license": "MIT",
   "icons": [
     {
-      "src": "/icon.svg",
+      "src": "icon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }
   ],
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#0a0a1a",
   "theme_color": "#00ffff",
@@ -42,7 +42,7 @@
       "alt": "Achievement unlocked notification with credential issuance"
     }
   ],
-  "repository": "https://github.com/learningeconomy/LearnCard",
+  "repository": "https://computer8004.github.io/space-dodger/",
   "app_store_category": "Games",
   "age_rating": "Everyone",
   "privacy_policy": "No personal data collection. Only verifiable credentials are issued to the user's LearnCard wallet.",
